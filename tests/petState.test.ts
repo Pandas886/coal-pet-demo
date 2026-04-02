@@ -5,7 +5,7 @@ import {
   resolveAutoState,
   resolveClickReaction,
   shouldEnterMiniMode,
-} from '../petState';
+} from '../src/logic/petState';
 
 test('resolveAutoState maps control modes to concrete pet states', () => {
   assert.strictEqual(resolveAutoState('idle'), 'idle');

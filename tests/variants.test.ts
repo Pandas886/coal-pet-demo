@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {
   getVariants,
   resolveVariant,
-} from '../variants';
+} from '../src/logic/variants';
 
 test('getVariants exposes the two approved exploration directions', () => {
   const variants = getVariants();
