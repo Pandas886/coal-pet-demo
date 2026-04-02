@@ -1,4 +1,11 @@
-const VARIANTS = [
+export interface Variant {
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+}
+
+export const VARIANTS: Variant[] = [
   {
     id: 'clawdish',
     name: '方向 2',
@@ -13,10 +20,10 @@ const VARIANTS = [
   },
 ];
 
-export function getVariants() {
+export function getVariants(): Variant[] {
   return VARIANTS.map((variant) => ({ ...variant }));
 }
 
-export function resolveVariant(id) {
+export function resolveVariant(id: string): Variant {
   return VARIANTS.find((variant) => variant.id === id) ?? VARIANTS[0];
 }
